@@ -1,0 +1,13 @@
+--- objects.py	2018-06-16 08:32:14.000000000 -0700
++++ objects.py.orig	2018-06-11 06:38:10.000000000 -0700
+@@ -181,8 +181,8 @@
+         rc = None
+         response = self._query_properties(props, depth)
+         properties = self._handle_prop_response(response, props)
+-        path = unquote(self.url.path)
+-        exchange_path = path + '/'
++        path = self.url.path
++        exchange_path = self.url.path + '/'
+ 
+         if path in list(properties.keys()):
+             rc = properties[path]
