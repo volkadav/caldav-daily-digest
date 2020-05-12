@@ -1,4 +1,4 @@
-#!/usr/bin/python3.4
+#!/usr/bin/python3
 
 """calendar digest cron script
 
@@ -16,6 +16,7 @@ from urllib.parse import quote_plus
 from icalendar import Calendar
 import caldav
 import pytz
+import sys
 
 # you'll probably want to change these:
 USERNAME = 'foobar@bazquux.com'
@@ -23,6 +24,7 @@ PASSWORD = 'ChAng3M3!'
 BASE_URL = 'stbeehive.blahblahblah.foo/caldav/st/principals/individuals/'
 
 # below here you probably will not need to make changes
+sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf8', buffering=1)
 URL = 'https://' + quote_plus(USERNAME) + ":" + quote_plus(PASSWORD) \
         + '@' + BASE_URL + quote_plus(USERNAME) + '/'
 NOW = datetime.now()
