@@ -20,4 +20,4 @@ optional but likely: a functioning cron setup to run this
 the day's meetings at 6:30am every workday)
 
 # tested on
-linux (debian, python 3.4, x86)
+linux (debian, python 3.4+, x86)
