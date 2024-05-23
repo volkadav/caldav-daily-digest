@@ -34,7 +34,7 @@ DAY_END = DAY_START + timedelta(hours=24)
 if "TZ" in environ:
     LOCAL_TZ = pytz.timezone(environ["TZ"])
 else:
-    LOCAL_TZ = pytz.timezone("US/Pacific")
+    LOCAL_TZ = pytz.timezone("UTC")
 
 def pretty_print_time(date_time):
     """takes a datetime and normalizes it to local time, prints nicely"""
